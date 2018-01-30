@@ -1,0 +1,10 @@
+<ion-header>
+    <ion-navbar>
+        News
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div *ngIf="news">
+        <news-item *ngFor="let n of news" [newsItem]="n"></news-item>
+    </div>
+</ion-content>
