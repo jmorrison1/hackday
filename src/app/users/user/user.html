@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Add User</ion-title>
+        <ion-buttons end>
+            <button ion-button clear (click)="save()">
+                Save
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Name</ion-label>
+            <ion-textarea type="text" [(ngModel)]="user.name"></ion-textarea>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-textarea type="text" [(ngModel)]="user.email"></ion-textarea>
+        </ion-item>
+    </ion-list>
+</ion-content>

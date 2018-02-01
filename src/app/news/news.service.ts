@@ -1,18 +1,19 @@
+import { SqlService, Query } from './../core/sql.service';
 import { News } from './news';
 import { Injectable } from "@angular/core";
 import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
 
 
 @Injectable()
 export class NewsService {
 
-    constructor(private http: Http) {
+    constructor(private http: Http,
+        private sql: SqlService) {
 
     }
 
     getNews() {
-        return this.http.get('https://api.foodsconnected.com/public/news')
+        return this.http.get('http://devapi.foodsconnected.com/public/news')
             .map(response => {
                 var news: News[] = [];
 
@@ -23,4 +24,5 @@ export class NewsService {
                 return news;
             });
     }
+
 }

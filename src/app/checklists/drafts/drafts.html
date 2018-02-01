@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Drafts</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-item *ngFor="let draft of drafts || []" (click)="edit(draft)">
+        <h2>{{draft.title}}</h2>
+        <p>{{draft.lastEdited}}</p>
+    </ion-item>
+    <ion-fab bottom right>
+        <button icon-only ion-fab (click)="edit()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-content>

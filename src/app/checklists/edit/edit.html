@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Edit Draft</ion-title>
+        <ion-buttons end>
+            <button ion-button clear (click)="save()">
+                Save
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <form *ngIf="checklist" [form]="checklist.form"></form>
+</ion-content>

@@ -1,3 +1,5 @@
+import { UserModule } from './users/users.module';
+import { ChecklistModule } from './checklists/checklists.module';
 import { NewsModule } from './news/news.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -16,7 +18,9 @@ import { HomePage } from '../pages/home/home';
   imports: [
     BrowserModule,    
     IonicModule.forRoot(MyApp),
-    NewsModule
+    NewsModule,
+    ChecklistModule,
+    UserModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
